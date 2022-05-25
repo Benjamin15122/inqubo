@@ -87,6 +87,26 @@ public class BidView extends VerticalLayout {
         }
     }
 
+    public void constructEditingView(FormLayout formLayout){
+        // add editing component
+        // add review button : jump to reviewing ->listener: removeAll construct ReviewingView
+        // add save button no listener
+    }
+
+    public void constructReviewingView(FormLayout formLayout){
+        // add approve button -> listener: removeAll constructTrackingView
+        // add disapprove button -> listener: removeAll constructEditingView
+    }
+
+    public void constructTrackingView(FormLayout formLayout){
+        // add finalize button ->  listener: removeAll constructClosedView
+        // add track button no listener
+    }
+
+    public void constructClosedView(FormLayout formLayout){
+        // add String: Finalized
+    }
+
     public BidView() throws ModelException {
         bid.setContent(new Content("",""));
 
@@ -108,6 +128,7 @@ public class BidView extends VerticalLayout {
                 commands=t.getExpectedCommands();
                 constructSelect(selectFormLayout);
 //                showNotify(commands.toString());
+                constructEditingView(createFormLayout);
             } catch (ModelException e) {
                 e.printStackTrace();
             }
