@@ -30,7 +30,7 @@ import com.vaadin.flow.router.Route;
  * It demonstrates how to create a form using Vaadin and the Binder. The backend
  * service and data class are in the <code>.data</code> package.
  */
-//@Route("")
+@Route("")
 public class MainView extends VerticalLayout {
 
     private Checkbox allowMarketingBox;
